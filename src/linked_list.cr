@@ -1,3 +1,19 @@
+# A linked list is a **Enumerable** (see the `Enumerable` module) data structure
+# that stores multiple pieces of data in non contiguous locations in memory.
+#
+# To create a linked list:
+#
+# ```
+# list = LinkedList(Int32).new
+# list.push(2)
+# list.pop
+# ```
+#
+# The above produces:
+#
+# ```text
+# 2
+# ```
 class LinkedList(A)
   include Enumerable(A | Nil)
 
@@ -128,24 +144,63 @@ class LinkedList(A)
     end
   end
 
+  # A node is the building block of linked lists consisting of a values
+  # and a pointer to the next node in the linked list.
+  #
+  # To create a node:
+  #
+  # ```
+  # node = Node.new(5)
+  # node.value
+  # ```
+  #
+  # The above produces:
+  #
+  # ```text
+  # 5
+  # ```
+  #
+  # Check the value of the node with `#value`.
+  # Get the next node in the list with `#next`.
   class Node(T)
     @next = nil
     @value = nil
 
+    # Creates a node with no value.
     def initialize
     end
 
+    # Creates a node with the specified *value*.
     def initialize(@value : T)
     end
 
+    # Returns the value of the node
+    #
+    # ```
+    # Node.new(1).value # => 1
+    # ```
     def value
       @value
     end
 
+    # Returns the next node in the linked list, or nil if it's the tail.
+    #
+    # ```
+    # node = Node.new(1)
+    # node.next = Node.new(2)
+    # node.next.value # => 2
+    # ```
     def next
       @next
     end
 
+    # Sets the next node in the linked list to *next_node*
+    #
+    # ```
+    # node = Node.new(1)
+    # node.next = Node.new(2)
+    # node.next.value # => 2
+    # ```
     def next=(next_node : Node(T) | Nil)
       @next = next_node
     end
