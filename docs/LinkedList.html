@@ -79,7 +79,7 @@ that stores multiple pieces of data in non contiguous locations in memory.</p>
 
 <pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>
 list.push(<span class="n">2</span>)
-list.pop</code></pre>
+puts list.pop</code></pre>
 
 <p>The above produces:</p>
 
@@ -108,7 +108,7 @@ list.pop</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L17" target="_blank">
+      <a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L17" target="_blank">
         linked_list.cr
       </a>
     
@@ -125,15 +125,21 @@ list.pop</code></pre>
       <li class="entry-summary">
         <a href="#new(values:Enumerable(A))-class-method" class="signature"><strong>.new</strong>(values : Enumerable(A))</a>
         
+          <div class="summary"><p>Creates a linked list with the <em>values</em> as the values of the nodes.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
+          <div class="summary"><p>Creates an empty linked list.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#new(*values)-class-method" class="signature"><strong>.new</strong>(*values)</a>
+        
+          <div class="summary"><p>Creates a linked list with the <em>values</em> as the values of the nodes.</p></div>
         
       </li>
     
@@ -149,67 +155,91 @@ list.pop</code></pre>
       <li class="entry-summary">
         <a href="#+(list:Enumerable(C))forallC-instance-method" class="signature"><strong>#+</strong>(list : Enumerable(C)) forall C</a>
         
+          <div class="summary"><p>Returns a new <code><a href="LinkedList.html">LinkedList</a></code> with all of the elements from the first list followed by all of the elements in the second <em>list</em>.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#%3C%3C(value:A)-instance-method" class="signature"><strong>#<<</strong>(value : A)</a>
+        
+          <div class="summary"><p>Override the &lt;&lt; (shift) operator to add a <em>value</em> to the end of a linked list.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#append(value:A)-instance-method" class="signature"><strong>#append</strong>(value : A)</a>
         
+          <div class="summary"><p>Adds a <em>value</em> to the end of a linked list.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#append(*values)-instance-method" class="signature"><strong>#append</strong>(*values)</a>
+        
+          <div class="summary"><p>Adds a list of <em>values</em> to the end of a linked list.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#concat(list:LinkedList(A))-instance-method" class="signature"><strong>#concat</strong>(list : LinkedList(A))</a>
         
+          <div class="summary"><p>Adds all the elemenets of the <em>list</em> to the end of the current linked list.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#each(&block)-instance-method" class="signature"><strong>#each</strong>(&block)</a>
         
-          <div class="summary"><p>Must yield this collection's elements to the block.</p></div>
+          <div class="summary"><p>Iterates over all the values in the linked list.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#empty?-instance-method" class="signature"><strong>#empty?</strong></a>
         
+          <div class="summary"><p>Returns true if and only if there are no elements in the list.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#peek-instance-method" class="signature"><strong>#peek</strong></a>
+        
+          <div class="summary"><p>Returns the value of the tail of the linked list, or nil if no value was supplied.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#pop-instance-method" class="signature"><strong>#pop</strong></a>
         
+          <div class="summary"><p>Returns the last <code><a href="LinkedList/Node.html">Node</a></code> from the list and removes it.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#push(value:A)-instance-method" class="signature"><strong>#push</strong>(value : A)</a>
+        
+          <div class="summary"><p>Adds a <em>value</em> to the end of a linked list.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#reverse-instance-method" class="signature"><strong>#reverse</strong></a>
         
+          <div class="summary"><p>Creates a copy of the <code><a href="LinkedList.html">LinkedList</a></code> with the order reversed.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#shift-instance-method" class="signature"><strong>#shift</strong></a>
         
+          <div class="summary"><p>Returns the first <code><a href="LinkedList/Node.html">Node</a></code> from the list and removes it.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#unshift(value:A)-instance-method" class="signature"><strong>#unshift</strong>(value : A)</a>
+        
+          <div class="summary"><p>Adds a <em>value</em> to the beginning of a linked list.</p></div>
         
       </li>
     
@@ -264,10 +294,15 @@ list.pop</code></pre>
         <a class="method-permalink" href="#new(values:Enumerable(A))-class-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Creates a linked list with the <em>values</em> as the values of the nodes.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -280,10 +315,15 @@ list.pop</code></pre>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Creates an empty linked list.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -296,10 +336,15 @@ list.pop</code></pre>
         <a class="method-permalink" href="#new(*values)-class-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Creates a linked list with the <em>values</em> as the values of the nodes.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -319,10 +364,22 @@ list.pop</code></pre>
         <a class="method-permalink" href="#+(list:Enumerable(C))forallC-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns a new <code><a href="LinkedList.html">LinkedList</a></code> with all of the elements from the first list
+followed by all of the elements in the second <em>list</em>.</p>
+
+<pre><code>first_list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>(<span class="n">1</span>, <span class="n">2</span>)
+second_list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">String</span>).<span class="k">new</span>(<span class="s">&quot;foo&quot;</span>, <span class="s">&quot;bar&quot;</span>)
+combined_list <span class="o">=</span> first_list <span class="o">+</span> second_list
+combined_list.peek() <span class="c"># =&gt; &quot;bar&quot;</span>
+combined_list.shift() <span class="c"># =&gt; 1</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L191" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -335,10 +392,22 @@ list.pop</code></pre>
         <a class="method-permalink" href="#%3C%3C(value:A)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Override the &lt;&lt; (shift) operator to add a <em>value</em> to the end of a
+linked list. This method returns itself so it can be chained.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>(<span class="n">1</span>)
+list <span class="o">&lt;&lt;</span> <span class="n">2</span> <span class="o">&lt;&lt;</span> <span class="n">3</span>
+list.pop() <span class="c"># =&gt; 3</span>
+list.pop() <span class="c"># =&gt; 2</span>
+list.pop() <span class="c"># =&gt; 1</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -351,10 +420,21 @@ list.pop</code></pre>
         <a class="method-permalink" href="#append(value:A)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Adds a <em>value</em> to the end of a linked list.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>
+list.append(<span class="n">1</span>)
+list.push(<span class="n">2</span>)
+list.pop() <span class="c"># =&gt; 2</span>
+list.pop() <span class="c"># =&gt; 1</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -367,10 +447,20 @@ list.pop</code></pre>
         <a class="method-permalink" href="#append(*values)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Adds a list of <em>values</em> to the end of a linked list.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span> <span class="o">|</span> <span class="t">String</span>).<span class="k">new</span>
+list.append(<span class="n">1</span>, <span class="s">&quot;foo&quot;</span>)
+list.pop() <span class="c"># =&gt; &quot;foo&quot;</span>
+list.pop() <span class="c"># =&gt; 1</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L84" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -383,10 +473,21 @@ list.pop</code></pre>
         <a class="method-permalink" href="#concat(list:LinkedList(A))-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Adds all the elemenets of the <em>list</em> to the end of the current linked list.</p>
+
+<pre><code>first_list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>(<span class="n">1</span>, <span class="n">2</span>)
+second_list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>(<span class="n">3</span>, <span class="n">4</span>)
+combined_list <span class="o">=</span> first_list.concat(second_list)
+combined_list.peek() <span class="c"># =&gt; 4</span>
+combined_list.shift() <span class="c"># =&gt; 1</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L113" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L211" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -401,17 +502,28 @@ list.pop</code></pre>
       
         <div class="doc">
           
-            <div class="doc-inherited">
-              Description copied from module Enumerable(A?)
-            </div>
-          
-          <p>Must yield this collection's elements to the block.</p>
+          <p>Iterates over all the values in the linked list.</p>
+
+<pre><code>values <span class="o">=</span> [<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>]
+list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>(values)
+list.each <span class="k">do</span> <span class="o">|</span>elem<span class="o">|</span>
+  puts elem
+<span class="k">end</span>
+
+<span class="t">The</span> above produces:
+</code></pre>
+
+<p>1
+2
+3</p>
+
+<pre><code></code></pre>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L95" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L174" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -424,10 +536,20 @@ list.pop</code></pre>
         <a class="method-permalink" href="#empty?-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns true if and only if there are no elements in the list.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>
+list.empty? <span class="c"># =&gt; true</span>
+list.push(<span class="n">1</span>)
+list.empty? <span class="c"># =&gt; false</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L119" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L225" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -440,10 +562,20 @@ list.pop</code></pre>
         <a class="method-permalink" href="#peek-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns the value of the tail of the linked list,
+or nil if no value was supplied.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Float64</span>).<span class="k">new</span>(<span class="n">1.23</span>)
+list.push(<span class="n">4.56</span>)
+list.peek() <span class="c"># =&gt; 4.56</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L132" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -456,10 +588,20 @@ list.pop</code></pre>
         <a class="method-permalink" href="#pop-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns the last <code><a href="LinkedList/Node.html">Node</a></code> from the list and removes it.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Float64</span>).<span class="k">new</span>(<span class="n">1.23</span>)
+list.push(<span class="n">4.56</span>)
+list.pop() <span class="c"># =&gt; 4.56</span>
+list.peek() <span class="c"># =&gt; 1.23</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L144" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -472,10 +614,21 @@ list.pop</code></pre>
         <a class="method-permalink" href="#push(value:A)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Adds a <em>value</em> to the end of a linked list.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>
+list.append(<span class="n">1</span>)
+list.push(<span class="n">2</span>)
+list.pop() <span class="c"># =&gt; 2</span>
+list.pop() <span class="c"># =&gt; 1</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L57" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -488,10 +641,21 @@ list.pop</code></pre>
         <a class="method-permalink" href="#reverse-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Creates a copy of the <code><a href="LinkedList.html">LinkedList</a></code> with the order reversed.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>(<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>)
+reversed_list <span class="o">=</span> list.reverse
+list.pop() <span class="c"># =&gt; 1</span>
+list.pop() <span class="c"># =&gt; 2</span>
+list.pop() <span class="c"># =&gt; 3</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L123" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L238" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -504,10 +668,20 @@ list.pop</code></pre>
         <a class="method-permalink" href="#shift-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns the first <code><a href="LinkedList/Node.html">Node</a></code> from the list and removes it.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Float64</span>).<span class="k">new</span>(<span class="n">1.23</span>)
+list.push(<span class="n">4.56</span>)
+list.shift() <span class="c"># =&gt; 1.23</span>
+list.peek() <span class="c"># =&gt; 4.56</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -520,10 +694,20 @@ list.pop</code></pre>
         <a class="method-permalink" href="#unshift(value:A)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Adds a <em>value</em> to the beginning of a linked list.</p>
+
+<pre><code>list <span class="o">=</span> <span class="t">LinkedList</span>(<span class="t">Int32</span>).<span class="k">new</span>(<span class="n">1</span>)
+list.unshift(<span class="n">2</span>)
+list.pop() <span class="c"># =&gt; 1</span>
+list.pop() <span class="c"># =&gt; 2</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L98" target="_blank">View source</a>]
         
       </div>
     </div>

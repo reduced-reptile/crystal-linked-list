@@ -78,7 +78,7 @@ and a pointer to the next node in the linked list.</p>
 <p>To create a node:</p>
 
 <pre><code>node <span class="o">=</span> <span class="t">Node</span>.<span class="k">new</span>(<span class="n">5</span>)
-node.value</code></pre>
+puts node.value</code></pre>
 
 <p>The above produces:</p>
 
@@ -103,7 +103,7 @@ Get the next node in the list with <code><a href="../LinkedList/Node.html#next-i
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L165" target="_blank">
+      <a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L308" target="_blank">
         linked_list.cr
       </a>
     
@@ -143,7 +143,7 @@ Get the next node in the list with <code><a href="../LinkedList/Node.html#next-i
       <li class="entry-summary">
         <a href="#next-instance-method" class="signature"><strong>#next</strong></a>
         
-          <div class="summary"><p>Returns the next node in the linked list, or nil if it's the tail.</p></div>
+          <div class="summary"><p>Returns the next node in the linked list, or nil if it is the tail.</p></div>
         
       </li>
     
@@ -157,7 +157,7 @@ Get the next node in the list with <code><a href="../LinkedList/Node.html#next-i
       <li class="entry-summary">
         <a href="#value-instance-method" class="signature"><strong>#value</strong></a>
         
-          <div class="summary"><p>Returns the value of the node</p></div>
+          <div class="summary"><p>Returns the value of the node, or nil if no value was supplied</p></div>
         
       </li>
     
@@ -210,7 +210,7 @@ Get the next node in the list with <code><a href="../LinkedList/Node.html#next-i
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L174" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L317" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -231,7 +231,7 @@ Get the next node in the list with <code><a href="../LinkedList/Node.html#next-i
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L170" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L313" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -253,7 +253,7 @@ Get the next node in the list with <code><a href="../LinkedList/Node.html#next-i
       
         <div class="doc">
           
-          <p>Returns the next node in the linked list, or nil if it's the tail.</p>
+          <p>Returns the next node in the linked list, or nil if it is the tail.</p>
 
 <pre><code>node <span class="o">=</span> <span class="t">Node</span>.<span class="k">new</span>(<span class="n">1</span>)
 node.<span class="k">next</span> <span class="o">=</span> <span class="t">Node</span>.<span class="k">new</span>(<span class="n">2</span>)
@@ -263,7 +263,7 @@ node.<span class="k">next</span>.value <span class="c"># =&gt; 2</span></code></
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L193" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L336" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -288,7 +288,7 @@ node.<span class="k">next</span>.value <span class="c"># =&gt; 2</span></code></
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L204" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L347" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -303,7 +303,7 @@ node.<span class="k">next</span>.value <span class="c"># =&gt; 2</span></code></
       
         <div class="doc">
           
-          <p>Returns the value of the node</p>
+          <p>Returns the value of the node, or nil if no value was supplied</p>
 
 <pre><code><span class="t">Node</span>.<span class="k">new</span>(<span class="n">1</span>).value <span class="c"># =&gt; 1</span></code></pre>
         </div>
@@ -311,7 +311,7 @@ node.<span class="k">next</span>.value <span class="c"># =&gt; 2</span></code></
       <br/>
       <div>
         
-          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/92f2e350aee9ae1f6ac70fdbcf3078fdc9e4ee93/src/linked_list.cr#L182" target="_blank">View source</a>]
+          [<a href="https://github.com/reduced-reptile/crystal-linked-list/blob/ab6f247b4f63ae12cc36090dcab55597b4d0b88a/src/linked_list.cr#L325" target="_blank">View source</a>]
         
       </div>
     </div>
